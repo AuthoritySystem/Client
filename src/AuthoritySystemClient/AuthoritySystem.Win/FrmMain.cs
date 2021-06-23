@@ -53,8 +53,8 @@ namespace AuthoritySystem.Win
                     tsSubMenuItem = new ToolStripMenuItem();
                     tsSubMenuItem.Text = child.MenuName;
                     tsSubMenuItem.Tag = child.Url;
-                    //// 子节点绑定单击事件
-                    //tsSubMenuItem.Click += TsSubMenuItem_Click1;
+                    // 子节点绑定单击事件
+                    tsSubMenuItem.Click += TsSubMenuItem_Click;
                     // 添加父节点下面的子节点
                     tsMenuItem.DropDownItems.Add(tsSubMenuItem);
                 }
@@ -90,15 +90,10 @@ namespace AuthoritySystem.Win
             muMenu.Items.Add(tsMenuItem);
         }
 
-        private void TsSubMenuItem_Click1(object sender, EventArgs e)
+        private void TsSubMenuItem_Click(object sender, EventArgs e)
         {
             ToolStripMenuItem tsMenu = sender as ToolStripMenuItem;
             ShowMdiChildForm(tsMenu.Tag.ToString());
-        }
-
-        private void TsSubMenuItem_Click(object sender, EventArgs e)
-        {
-            throw new NotImplementedException();
         }
 
         private void frmMain_FormClosing(object sender, FormClosingEventArgs e)
@@ -108,8 +103,6 @@ namespace AuthoritySystem.Win
 
         public void ShowMdiChildForm(string dllName)
         {
-            //MessageBox.Show(dllName);
-
             //存放窗体文件的dll文件的路径
             string path = Application.StartupPath + $"\\{dllName}";
             Assembly ab = Assembly.LoadFrom(path);
@@ -117,23 +110,12 @@ namespace AuthoritySystem.Win
             foreach (Type t in types)
             {
                 var MdiChildForm = ab.CreateInstance(t.FullName, true) as Form;
-                if (MdiChildForm == null)
+                if(MdiChildForm != null)
                 {
-                    throw new NoNullAllowedException("mdiChildForm");
+                    MdiChildForm.MdiParent = this;
+                    MdiChildForm.Show();
+                    MdiChildForm.Dock = DockStyle.Fill;
                 }
-
-                MdiChildForm.MdiParent = this;
-                MdiChildForm.Show();
-                MdiChildForm.Dock = DockStyle.Fill;
-                //if (t.BaseType.Name.Equals("FrmRibbonBase") && t.Name == am.ClassName)
-                //{
-
-                //    FrmRibbonBase frm = ab.CreateInstance(t.FullName) as FrmRibbonBase;
-                //    frm.MdiParent = this;
-                //    frm.Text = navItem.Caption;
-                //    frm.Show();
-                //    break;
-                //}
             }
         }
 
