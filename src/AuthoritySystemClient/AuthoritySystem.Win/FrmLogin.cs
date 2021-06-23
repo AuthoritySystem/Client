@@ -38,7 +38,6 @@ namespace AuthoritySystem.Win
             });
             if(result.Code==1)
             {
-                MessageBox.Show("登录成功");
                 // 显示主窗体
                 FrmMain frmMain = new FrmMain();
                 frmMain.WindowState = FormWindowState.Maximized;
