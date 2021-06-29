@@ -81,6 +81,7 @@ namespace AuthoritySystem.UserManager
             this.tsbtnAdd.Name = "tsbtnAdd";
             this.tsbtnAdd.Size = new System.Drawing.Size(36, 29);
             this.tsbtnAdd.Text = "新增";
+            this.tsbtnAdd.Click += new System.EventHandler(this.tsbtnAdd_Click);
             // 
             // toolStripSeparator1
             // 
@@ -119,6 +120,7 @@ namespace AuthoritySystem.UserManager
             this.tsbtnSearch.Name = "tsbtnSearch";
             this.tsbtnSearch.Size = new System.Drawing.Size(36, 29);
             this.tsbtnSearch.Text = "查询";
+            this.tsbtnSearch.Click += new System.EventHandler(this.tsbtnSearch_Click);
             // 
             // pnlFull
             // 

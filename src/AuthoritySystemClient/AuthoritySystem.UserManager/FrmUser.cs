@@ -42,5 +42,23 @@ namespace AuthoritySystem.UserManager
                 this.dgvUsers.DataSource = responseData.Data;
             }
         }
+
+        private void tsbtnAdd_Click(object sender, EventArgs e)
+        {
+            FrmAddUser frmAddUser = new FrmAddUser();
+            // 刷新数据
+            frmAddUser.RefreshData = InitialData;
+            frmAddUser.Show();
+        }
+
+        /// <summary>
+        /// 查询
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void tsbtnSearch_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
