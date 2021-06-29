@@ -11,7 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AuthoritySystem.Common", "A
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AuthoritySystem.Model", "AuthoritySystem.Model\AuthoritySystem.Model.csproj", "{C3A38416-EFA6-4370-AF64-A58682CE8B9D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthoritySystem.UserManager", "AuthoritySystem.UserManager\AuthoritySystem.UserManager.csproj", "{26C97177-627A-434E-BCBE-536C8A9C12C1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AuthoritySystem.UserManager", "AuthoritySystem.UserManager\AuthoritySystem.UserManager.csproj", "{26C97177-627A-434E-BCBE-536C8A9C12C1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthoritySystem.DepartManager", "AuthoritySystem.DepartManager\AuthoritySystem.DepartManager.csproj", "{83BE4D82-E136-4D94-A408-2D94560F111C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{26C97177-627A-434E-BCBE-536C8A9C12C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{26C97177-627A-434E-BCBE-536C8A9C12C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{26C97177-627A-434E-BCBE-536C8A9C12C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83BE4D82-E136-4D94-A408-2D94560F111C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83BE4D82-E136-4D94-A408-2D94560F111C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83BE4D82-E136-4D94-A408-2D94560F111C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83BE4D82-E136-4D94-A408-2D94560F111C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
