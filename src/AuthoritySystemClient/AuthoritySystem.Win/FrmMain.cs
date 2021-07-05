@@ -26,7 +26,7 @@ namespace AuthoritySystem.Win
             ToolStripMenuItem tsSubMenuItem = null;
 
             // 动态获取菜单
-            string menuUrl = $"{ConfigHelper.GetValue("WebApiUrl")}/api/Menu/GetList";
+            string menuUrl = $"{ConfigHelper.GetValue("WebApiUrl")}/api/Menu";
 
             var responseData = await HttpClientHelper.GetObjectAsync<ApiResponseWithData<List<TB_Menu>>>(menuUrl);
 

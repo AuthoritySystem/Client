@@ -112,7 +112,7 @@ namespace AuthoritySystem.UserManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(274, 200);
+            this.ClientSize = new System.Drawing.Size(285, 197);
             this.Controls.Add(this.BtnCancle);
             this.Controls.Add(this.BtnSave);
             this.Controls.Add(this.TxtName);
@@ -121,6 +121,7 @@ namespace AuthoritySystem.UserManager
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtLogin);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmAddUser";

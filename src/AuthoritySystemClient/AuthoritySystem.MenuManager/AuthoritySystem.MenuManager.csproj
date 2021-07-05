@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AuthoritySystem.Common\AuthoritySystem.Common.csproj" />
+    <ProjectReference Include="..\AuthoritySystem.Model\AuthoritySystem.Model.csproj" />
+  </ItemGroup>
+
+</Project>
