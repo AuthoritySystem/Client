@@ -15,6 +15,7 @@
     <ProjectReference Include="..\AuthoritySystem.Common\AuthoritySystem.Common.csproj" />
     <ProjectReference Include="..\AuthoritySystem.DepartManager\AuthoritySystem.DepartManager.csproj" />
     <ProjectReference Include="..\AuthoritySystem.Model\AuthoritySystem.Model.csproj" />
+    <ProjectReference Include="..\AuthoritySystem.RoleManager\AuthoritySystem.RoleManager.csproj" />
     <ProjectReference Include="..\AuthoritySystem.UserManager\AuthoritySystem.UserManager.csproj" />
   </ItemGroup>
 

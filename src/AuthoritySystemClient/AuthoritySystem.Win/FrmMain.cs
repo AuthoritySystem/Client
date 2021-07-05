@@ -53,6 +53,8 @@ namespace AuthoritySystem.Win
                     tsSubMenuItem = new ToolStripMenuItem();
                     tsSubMenuItem.Text = child.MenuName;
                     tsSubMenuItem.Tag = child.Url;
+                    string className = $"{child.NameSpace}.{child.ClassName}";
+                    tsSubMenuItem.Name = className;
                     // 子节点绑定单击事件
                     tsSubMenuItem.Click += TsSubMenuItem_Click;
                     // 添加父节点下面的子节点
@@ -93,30 +95,27 @@ namespace AuthoritySystem.Win
         private void TsSubMenuItem_Click(object sender, EventArgs e)
         {
             ToolStripMenuItem tsMenu = sender as ToolStripMenuItem;
-            ShowMdiChildForm(tsMenu.Tag.ToString());
+            ShowMdiChildForm(tsMenu.Tag.ToString(),tsMenu.Name);
         }
 
         private void frmMain_FormClosing(object sender, FormClosingEventArgs e)
         {
-            e.Cancel = false;
+            DialogResult dialogResult = MessageBox.Show("确定要退出吗?", "提示", MessageBoxButtons.YesNo);
+            if(dialogResult==DialogResult.Yes)
+            {
+                e.Cancel = false;
+            }
         }
 
-        public void ShowMdiChildForm(string dllName)
+        public void ShowMdiChildForm(string dllName,string className)
         {
             //存放窗体文件的dll文件的路径
             string path = Application.StartupPath + $"\\{dllName}";
             Assembly ab = Assembly.LoadFrom(path);
-            Type[] types = ab.GetTypes();
-            foreach (Type t in types)
-            {
-                var MdiChildForm = ab.CreateInstance(t.FullName, true) as Form;
-                if(MdiChildForm != null)
-                {
-                    MdiChildForm.MdiParent = this;
-                    MdiChildForm.Show();
-                    MdiChildForm.Dock = DockStyle.Fill;
-                }
-            }
+            Form form = ab.CreateInstance(className) as Form;
+            form.MdiParent = this;
+            form.Show();
+            form.Dock = DockStyle.Fill;
         }
 
         public void tsMenuExit_Click(object sender,EventArgs e)
