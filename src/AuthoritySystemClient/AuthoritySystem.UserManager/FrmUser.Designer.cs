@@ -133,6 +133,7 @@ namespace AuthoritySystem.UserManager
             // 
             // dgvUsers
             // 
+            this.dgvUsers.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgvUsers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvUsers.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvUsers.Location = new System.Drawing.Point(0, 0);

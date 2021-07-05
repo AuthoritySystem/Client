@@ -143,6 +143,7 @@ namespace AuthoritySystem.DepartManager
             // 
             // dgvDept
             // 
+            this.dgvDept.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgvDept.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDept.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvDept.Location = new System.Drawing.Point(0, 0);

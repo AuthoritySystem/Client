@@ -56,6 +56,7 @@ namespace AuthoritySystem.Win
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(604, 448);
             this.Controls.Add(this.panel1);
             this.IsMdiContainer = true;

@@ -40,10 +40,10 @@ namespace AuthoritySystem.RoleManager
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.tsTxtSearch = new System.Windows.Forms.ToolStripTextBox();
             this.tsBtnSearch = new System.Windows.Forms.ToolStripButton();
-            this.pnlFill = new System.Windows.Forms.Panel();
-            this.dgvRole = new System.Windows.Forms.DataGridView();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.tsBtnAuthority = new System.Windows.Forms.ToolStripButton();
+            this.pnlFill = new System.Windows.Forms.Panel();
+            this.dgvRole = new System.Windows.Forms.DataGridView();
             this.pnlTop.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.pnlFill.SuspendLayout();
@@ -136,26 +136,6 @@ namespace AuthoritySystem.RoleManager
             this.tsBtnSearch.Size = new System.Drawing.Size(36, 39);
             this.tsBtnSearch.Text = "查找";
             // 
-            // pnlFill
-            // 
-            this.pnlFill.Controls.Add(this.dgvRole);
-            this.pnlFill.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlFill.Location = new System.Drawing.Point(0, 42);
-            this.pnlFill.Name = "pnlFill";
-            this.pnlFill.Size = new System.Drawing.Size(800, 408);
-            this.pnlFill.TabIndex = 1;
-            // 
-            // dgvRole
-            // 
-            this.dgvRole.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvRole.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvRole.Location = new System.Drawing.Point(0, 0);
-            this.dgvRole.Name = "dgvRole";
-            this.dgvRole.RowTemplate.Height = 25;
-            this.dgvRole.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvRole.Size = new System.Drawing.Size(800, 408);
-            this.dgvRole.TabIndex = 0;
-            // 
             // toolStripSeparator4
             // 
             this.toolStripSeparator4.Name = "toolStripSeparator4";
@@ -170,6 +150,27 @@ namespace AuthoritySystem.RoleManager
             this.tsBtnAuthority.Size = new System.Drawing.Size(60, 39);
             this.tsBtnAuthority.Text = "设置权限";
             this.tsBtnAuthority.Click += new System.EventHandler(this.tsBtnAuthority_Click);
+            // 
+            // pnlFill
+            // 
+            this.pnlFill.Controls.Add(this.dgvRole);
+            this.pnlFill.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlFill.Location = new System.Drawing.Point(0, 42);
+            this.pnlFill.Name = "pnlFill";
+            this.pnlFill.Size = new System.Drawing.Size(800, 408);
+            this.pnlFill.TabIndex = 1;
+            // 
+            // dgvRole
+            // 
+            this.dgvRole.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dgvRole.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvRole.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvRole.Location = new System.Drawing.Point(0, 0);
+            this.dgvRole.Name = "dgvRole";
+            this.dgvRole.RowTemplate.Height = 25;
+            this.dgvRole.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvRole.Size = new System.Drawing.Size(800, 408);
+            this.dgvRole.TabIndex = 0;
             // 
             // FrmRoleManager
             // 
