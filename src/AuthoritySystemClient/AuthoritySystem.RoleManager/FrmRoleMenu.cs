@@ -16,7 +16,7 @@ namespace AuthoritySystem.RoleManager
 {
     public partial class FrmRoleMenu : Form
     {
-        public Guid id { get; set; }
+        public Guid RoleId { get; set; }
 
         public FrmRoleMenu()
         {
@@ -32,7 +32,7 @@ namespace AuthoritySystem.RoleManager
         private async void InitialData()
         {
             // 动态获取菜单
-            string menuUrl = $"{ConfigHelper.GetValue("WebApiUrl")}/api/RoleMenu/getlist/{id}";
+            string menuUrl = $"{ConfigHelper.GetValue("WebApiUrl")}/api/RoleMenu/getlist?id={RoleId}";
 
             var responseData = await HttpClientHelper.GetObjectAsync<ApiResponseWithData<List<TB_RoleMenu>>>(menuUrl);
             if (responseData !=null && responseData.Code.Equals(1))

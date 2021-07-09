@@ -148,7 +148,9 @@ namespace AuthoritySystem.DepartManager
             this.dgvDept.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvDept.Location = new System.Drawing.Point(0, 0);
             this.dgvDept.Name = "dgvDept";
+            this.dgvDept.RowHeadersVisible = false;
             this.dgvDept.RowTemplate.Height = 25;
+            this.dgvDept.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvDept.Size = new System.Drawing.Size(800, 415);
             this.dgvDept.TabIndex = 0;
             // 

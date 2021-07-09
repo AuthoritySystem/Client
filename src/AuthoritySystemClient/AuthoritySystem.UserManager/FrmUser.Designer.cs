@@ -138,7 +138,9 @@ namespace AuthoritySystem.UserManager
             this.dgvUsers.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvUsers.Location = new System.Drawing.Point(0, 0);
             this.dgvUsers.Name = "dgvUsers";
+            this.dgvUsers.RowHeadersVisible = false;
             this.dgvUsers.RowTemplate.Height = 25;
+            this.dgvUsers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvUsers.Size = new System.Drawing.Size(800, 418);
             this.dgvUsers.TabIndex = 0;
             // 

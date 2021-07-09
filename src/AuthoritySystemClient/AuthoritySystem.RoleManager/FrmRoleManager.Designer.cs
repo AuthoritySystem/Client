@@ -167,6 +167,7 @@ namespace AuthoritySystem.RoleManager
             this.dgvRole.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvRole.Location = new System.Drawing.Point(0, 0);
             this.dgvRole.Name = "dgvRole";
+            this.dgvRole.RowHeadersVisible = false;
             this.dgvRole.RowTemplate.Height = 25;
             this.dgvRole.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvRole.Size = new System.Drawing.Size(800, 408);

@@ -49,7 +49,7 @@ namespace AuthoritySystem.RoleManager
             if(rows.Count>0)
             {
                 FrmRoleMenu frmRoleMenu = new FrmRoleMenu();
-                frmRoleMenu.id = Guid.Parse(rows[0].Cells["ID"].Value.ToString());
+                frmRoleMenu.RoleId = Guid.Parse(rows[0].Cells["ID"].Value.ToString());
                 frmRoleMenu.ShowDialog();
             }
             else
